@@ -1,106 +1,133 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tokki - 개인정보처리방침</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.15rem; margin-top: 1.6rem; }
-    ul { padding-left: 1.2rem; }
-    table { border-collapse: collapse; margin: 0.6rem 0; }
-    th, td { border: 1px solid #ddd; padding: 0.4rem 0.7rem; text-align: left; vertical-align: top; }
-    .meta { color: #666; font-size: 0.9rem; }
-    code { background: #f4f4f4; padding: 0 0.25rem; border-radius: 3px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tokki - 개인정보처리방침</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+  h3 { font-size: 1.0rem; margin-top: 1.1rem; color: #444; }
+  ul { padding-left: 1.2rem; }
+  table { border-collapse: collapse; margin: 0.6rem 0; width: 100%; font-size: 0.92rem; }
+  th, td { border: 1px solid #ddd; padding: 0.4rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: #fafafa; }
+  .meta { color: #666; font-size: 0.9rem; }
+  code { background: #f4f4f4; padding: 0 0.25rem; border-radius: 3px; }
+  .note { background: #fff8e1; border-left: 3px solid #f59e0b; padding: 0.7rem 0.9rem; margin: 0.8rem 0; }
+</style>
 </head>
 <body>
-  <h1>Tokki - 개인정보처리방침</h1>
-  <p class="meta">시행일: 2026년 4월 28일<br/>최종 수정일: 2026년 4월 28일</p>
-  <p>Tokki(이하 "서비스")는 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보를 안전하게 보호하기 위해 다음과 같은 처리방침을 두고 있습니다. 이 정책은 한국 이용자에게 적용되며, 영문판(<code>privacy-policy.html</code>)과 내용이 상충할 경우 한국 이용자에 대해서는 본 한국어판이 우선합니다.</p>
 
-  <h2>1. 처리하는 개인정보 항목</h2>
-  <table>
-    <thead><tr><th>구분</th><th>수집 항목</th><th>수집 방법</th></tr></thead>
-    <tbody>
-      <tr><td>계정 정보</td><td>이메일 주소, 닉네임, 인증 식별자(user_id)</td><td>회원가입 시 이용자 입력 / OAuth 제공자(Google)로부터 수신</td></tr>
-      <tr><td>대화 데이터</td><td>이용자가 입력한 채팅 메시지, AI 응답, 페르소나 메모리, 무료 이용 횟수, 세션 메타데이터</td><td>서비스 이용 과정에서 자동 수집</td></tr>
-      <tr><td>결제 정보</td><td>구독 등급(subscription_tier), 구독 만료일, 인앱결제 영수증 메타데이터, 결제 이력(purchase_log)</td><td>Google Play / App Store 영수증 검증 결과로부터 수신 (카드번호 등 결제수단 자체는 수집하지 않음)</td></tr>
-      <tr><td>푸시 토큰</td><td>Expo Push Token / FCM Token</td><td>이용자가 알림 권한을 허용한 경우에 한해 자동 수집</td></tr>
-      <tr><td>기기/이용 정보</td><td>앱 버전, 운영체제(OS), 오류 로그</td><td>서비스 운영 및 장애 대응 과정에서 자동 수집</td></tr>
-    </tbody>
-  </table>
+<h1>Tokki - 개인정보처리방침</h1>
+<p class="meta">시행일: 2026년 5월 26일<br/>최종 수정일: 2026년 6월 13일</p>
 
-  <h2>2. 개인정보의 처리 목적</h2>
-  <ul>
-    <li>회원 식별 및 인증, 본인 확인</li>
-    <li>AI 대화 서비스 제공 및 페르소나 기반 개인화</li>
-    <li>인앱결제(IAP) 영수증 검증 및 구독 상태 동기화</li>
-    <li>푸시 알림 발송(이용자가 알림 권한을 허용한 경우)</li>
-    <li>서비스 안전성 확보, 부정 이용 방지, 장애 대응</li>
-    <li>법령 및 이용약관 위반 행위에 대한 제재</li>
-  </ul>
+<p>Tokki(이하 "서비스")는 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보를 안전하게 보호하기 위해 다음과 같은 처리방침을 두고 있습니다. 본 정책은 한국 이용자에게 적용되며, 영문판(<code>privacy-policy.html</code>)과 내용이 상충할 경우 한국 이용자에 대해서는 본 한국어판이 우선합니다.</p>
 
-  <h2>3. 개인정보의 보유 및 이용 기간</h2>
-  <ul>
-    <li>회원 정보: 회원 탈퇴 시까지. 단, 관계 법령에 따른 보존 의무가 있는 경우 해당 기간까지 보관합니다.</li>
-    <li>대화 데이터(채팅 메시지, 페르소나 메모리): 회원 탈퇴 시까지. 이용자가 앱 내에서 직접 삭제 가능한 항목은 즉시 삭제됩니다.</li>
-    <li>결제 이력(purchase_log): 「전자상거래 등에서의 소비자보호에 관한 법률」에 따라 5년간 보관합니다.</li>
-    <li>푸시 토큰: 알림 권한 해제 또는 회원 탈퇴 시 즉시 삭제됩니다.</li>
-  </ul>
+<h2>1. 처리하는 개인정보 항목</h2>
+<table>
+  <thead><tr><th>구분</th><th>수집 항목</th><th>수집 방법</th></tr></thead>
+  <tbody>
+    <tr><td>계정 정보</td><td>이메일 주소, 닉네임, 인증 식별자(user_id)</td><td>회원가입 시 이용자 입력 / OAuth 제공자(Google)로부터 수신</td></tr>
+    <tr><td>대화 데이터</td><td>이용자가 입력한 채팅 메시지, AI 응답, 페르소나 기억, 무료 이용 횟수, 세션 메타데이터</td><td>서비스 이용 과정에서 자동 수집</td></tr>
+    <tr><td>선택적 이미지 첨부</td><td>이용자가 채팅에 첨부하기로 선택한 사진 이미지</td><td>이용자가 사진을 직접 선택한 경우에만 메시지와 함께 전송. 사진 보관함 전체에는 접근하지 않음</td></tr>
+    <tr><td>선물 · 데일리 조이 기록</td><td>송신한 선물, 캐릭터에게 받은 무료 데일리 조이 선물, 마일스톤 도달, 친밀도 변동, 비밀 기억 해제 이력</td><td>이용자 액션에 따라 자동 기록</td></tr>
+    <tr><td>결제 정보</td><td>구독 등급(subscription_tier), 구독 만료일, 인앱결제 영수증 메타데이터, 결제 이력(purchase_log)</td><td>Google Play / App Store 영수증 검증 결과로부터 수신 (카드번호 등 결제수단 자체는 수집하지 않음)</td></tr>
+    <tr><td>분석 이벤트</td><td>익명화된 사용 신호 — 앱 실행, 화면 진입, 선물 발송, 무료 데일리 조이 수령, 결제 완료, A/B 노출 (메시지 내용·이메일·IP·기기 ID 포함 안 함)</td><td>화이트리스트에 등록된 이벤트만 수집</td></tr>
+    <tr><td>푸시 토큰</td><td>Expo Push Token / FCM Token</td><td>이용자가 알림 권한을 허용한 경우에 한해 자동 수집</td></tr>
+    <tr><td>대략적 위치 · 현지 날씨</td><td>대략적 위치 및 현지 날씨 정보 — 반려 캐릭터가 날씨를 자연스럽게 대화에 반영하기 위한 목적으로만 사용. GPS 좌표는 Tokki 서버나 Tokki 자체 분석에 저장하지 않으며, 현재 날씨 조회를 위해 앱에서 Open-Meteo로 일시 전송됩니다</td><td>이용자가 위치 권한을 허용한 경우에 한해 자동 수집</td></tr>
+    <tr><td>기기·이용 정보</td><td>앱 버전, 운영체제(OS), 오류 로그</td><td>서비스 운영 및 장애 대응 과정에서 자동 수집</td></tr>
+  </tbody>
+</table>
 
-  <h2>4. 개인정보의 제3자 제공 및 위탁</h2>
-  <p>서비스는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 다만, 서비스 제공을 위해 다음과 같이 처리 업무를 위탁하고 있습니다.</p>
-  <table>
-    <thead><tr><th>수탁자</th><th>위탁 업무</th><th>처리 국가</th></tr></thead>
-    <tbody>
-      <tr><td>Supabase, Inc.</td><td>데이터베이스, 인증, 서버리스 함수(Edge Functions) 호스팅 (AWS ap-northeast-2, 서울 리전)</td><td>대한민국</td></tr>
-      <tr><td>OpenAI, L.L.C.</td><td>AI 응답 생성을 위한 채팅 메시지 처리</td><td>미국</td></tr>
-      <tr><td>Google LLC</td><td>OAuth 로그인, Google Play 인앱결제 영수증 검증, 푸시 알림(FCM)</td><td>미국 등</td></tr>
-      <tr><td>Apple Inc.</td><td>App Store 인앱결제 영수증 검증(iOS 출시 시)</td><td>미국 등</td></tr>
-      <tr><td>Expo, Inc.</td><td>앱 런타임, 푸시 알림 토큰 발급</td><td>미국</td></tr>
-    </tbody>
-  </table>
-  <p>일부 수탁자는 해외에 위치하여 개인정보가 국외로 이전될 수 있습니다. 이전되는 정보 항목과 보유 기간은 위 제1조, 제3조와 동일합니다.</p>
+<h2>2. 개인정보의 처리 목적</h2>
+<ul>
+  <li>회원 식별 및 인증, 본인 확인</li>
+  <li>AI 대화 서비스 제공 및 페르소나 기반 개인화</li>
+  <li>무료 데일리 조이 선물 및 관계 마일스톤 제공</li>
+  <li>인앱결제(IAP) 영수증 검증, 구독 상태 동기화</li>
+  <li>푸시 알림 발송 (이용자가 알림 권한을 허용한 경우)</li>
+  <li>서비스 안전성 확보, 부정 이용 방지, 장애 대응</li>
+  <li>익명화된 사용 분석을 통한 가격 정책·게임 밸런스 개선 (A/B 실험 포함)</li>
+  <li>법령 및 이용약관 위반 행위에 대한 제재</li>
+</ul>
 
-  <h2>5. 이용자의 권리 및 행사 방법</h2>
-  <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
-  <ul>
-    <li>개인정보 열람 요구</li>
-    <li>오류가 있을 경우 정정 요구</li>
-    <li>삭제 요구(회원 탈퇴 포함)</li>
-    <li>처리 정지 요구</li>
-  </ul>
-  <p>위 권리는 앱 내 설정 메뉴 또는 아래 연락처를 통해 행사할 수 있으며, 서비스는 지체 없이 조치합니다.</p>
+<h2>3. 선택형 보상 광고</h2>
+<p>무료 이용자는 추가 채팅 턴을 받기 위해 선택적으로 보상형 광고를 시청할 수 있습니다. 이 기능을 위해 Google Mobile Ads / AdMob SDK를 사용합니다. Tokki는 개인정보를 판매하지 않으며, 유료 이용자는 무료 턴 광고 흐름을 이용하지 않아도 됩니다. 광고 요청 과정에서 Google이 광고 제공 및 측정에 필요한 광고 관련 식별자를 처리할 수 있으며, 필요한 경우 동의 설정과 플랫폼 설정이 적용됩니다.</p>
 
-  <h2>6. 만 14세 미만 아동의 개인정보</h2>
-  <p>서비스는 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 만 14세 미만으로 확인되는 경우 해당 계정과 관련 데이터를 즉시 삭제합니다.</p>
+<h2>4. 분석 데이터 — 엄격한 화이트리스트</h2>
+<p>서비스 개선을 위해 익명화된 사용 신호를 수집합니다. 모든 속성은 화이트리스트로 관리되며, 다음 정보는 Tokki 자체 분석 데이터에 <strong>절대 포함되지 않습니다</strong>:</p>
+<ul>
+  <li>채팅 메시지 본문(raw text)</li>
+  <li>이메일, 원본 닉네임, IP 주소</li>
+  <li>기기 식별자, 광고 식별자</li>
+  <li>위치 좌표</li>
+  <li>결제카드번호, 전체 거래 ID, 영수증 본문</li>
+</ul>
+<p>수집되는 이벤트 예시: <code>app_opened</code>, <code>paywall_viewed</code>, <code>purchase_completed</code>, <code>gift_sent</code>, <code>daily_joy_received</code>, <code>milestone_reached</code>, <code>mood_state_changed</code>, <code>experiment_exposed</code>. 각 이벤트는 분석 SDK 소스코드에 명시된 속성만 포함합니다.</p>
 
-  <h2>7. 개인정보의 안전성 확보 조치</h2>
-  <ul>
-    <li>전송 구간 암호화(HTTPS/TLS)</li>
-    <li>저장 데이터에 대한 행 수준 보안(Row Level Security) 적용 — 이용자는 본인의 데이터에만 접근 가능</li>
-    <li>관리자 권한(service_role) 분리 및 최소 권한 원칙 적용</li>
-    <li>인증 토큰(JWT) 기반 접근 통제</li>
-    <li>주요 변경 사항에 대한 감사 로그 기록</li>
-  </ul>
+<h2>5. 개인정보의 보유 및 이용 기간</h2>
+<ul>
+  <li>회원 정보 및 대화 데이터: 회원 탈퇴 시까지. 이용자가 앱 내에서 직접 삭제 가능한 항목은 즉시 삭제됩니다.</li>
+  <li>결제 이력(purchase_log): 「전자상거래 등에서의 소비자보호에 관한 법률」에 따라 5년간 보관</li>
+  <li>분석 이벤트 원본: 90일 보관 후 자동 삭제. 집계 통계는 영구 보관(개인 식별 불가)</li>
+  <li>푸시 토큰: 알림 권한 해제 또는 회원 탈퇴 시 즉시 삭제</li>
+</ul>
 
-  <h2>8. 개인정보 보호책임자 및 문의처</h2>
-  <p>개인정보 처리에 관한 문의, 불만 처리, 피해 구제 등은 아래 연락처로 요청하실 수 있습니다.</p>
-  <ul>
-    <li>개인정보 보호책임자: 송재성</li>
-    <li>이메일: <a href="mailto:privacy@bitterpill.chat">privacy@bitterpill.chat</a></li>
-  </ul>
-  <p>또한 다음 기관에 권리 침해에 대한 상담 및 신고를 하실 수 있습니다.</p>
-  <ul>
-    <li>개인정보분쟁조정위원회 (privacy.go.kr / 1833-6972)</li>
-    <li>개인정보침해신고센터 (privacy.kisa.or.kr / 118)</li>
-    <li>대검찰청 사이버수사과 (spo.go.kr / 1301)</li>
-    <li>경찰청 사이버수사국 (ecrm.cyber.go.kr / 182)</li>
-  </ul>
+<h2>6. 개인정보의 제3자 제공 및 위탁</h2>
+<p>서비스는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다. 다만, 서비스 제공을 위해 다음과 같이 처리 업무를 위탁하고 있습니다.</p>
+<table>
+  <thead><tr><th>수탁자</th><th>위탁 업무</th><th>처리 국가</th></tr></thead>
+  <tbody>
+    <tr><td>Supabase, Inc.</td><td>데이터베이스, 인증, 서버리스 함수(Edge Functions) 호스팅</td><td>미국 / 서울</td></tr>
+    <tr><td>OpenAI, L.L.C.</td><td>AI 응답 생성을 위한 채팅 메시지 및 선택적 이미지 첨부 처리(메시지 단위)</td><td>미국</td></tr>
+    <tr><td>Open-Meteo</td><td>선택적 위치 좌표 기반 현재 날씨 조회</td><td>EU 등</td></tr>
+    <tr><td>Google LLC</td><td>OAuth 로그인, Google Play 인앱결제 영수증 검증, 푸시 알림(FCM), 선택형 보상 광고용 Google Mobile Ads / AdMob</td><td>미국 등</td></tr>
+    <tr><td>Apple Inc.</td><td>App Store 인앱결제 영수증 검증(iOS 출시 시)</td><td>미국 등</td></tr>
+    <tr><td>Expo, Inc.</td><td>앱 런타임, 푸시 알림 토큰 발급</td><td>미국</td></tr>
+  </tbody>
+</table>
+<p>일부 수탁자는 해외에 위치하여 개인정보가 국외로 이전될 수 있습니다.</p>
 
-  <h2>9. 정책의 변경</h2>
-  <p>본 처리방침이 변경되는 경우, 변경 사항은 시행일 7일 전(이용자에게 불리한 변경의 경우 30일 전)에 앱 내 공지 또는 본 페이지를 통해 안내합니다.</p>
+<h2>7. 이용자의 권리 및 행사 방법</h2>
+<ul>
+  <li>개인정보 열람 요구</li>
+  <li>오류가 있을 경우 정정 요구</li>
+  <li>삭제 요구 (회원 탈퇴 포함 — 설정 → 계정 → 계정 삭제, 또는 현재 공개 Play 지원 호스트의 <a href="delete-account.html">웹 삭제 요청 페이지</a>)</li>
+  <li>처리 정지 요구</li>
+  <li>동의 철회 (푸시 권한 해제 등)</li>
+</ul>
+<p>위 권리는 앱 내 설정 메뉴 또는 아래 연락처를 통해 행사할 수 있으며, 서비스는 지체 없이 조치합니다.</p>
+
+<h2>8. 만 14세 미만 아동의 개인정보</h2>
+<p>서비스는 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 만 14세 미만으로 확인되는 경우 해당 계정과 관련 데이터를 즉시 삭제합니다.</p>
+
+<h2>9. 개인정보의 안전성 확보 조치</h2>
+<ul>
+  <li>전송 구간 암호화(HTTPS/TLS)</li>
+  <li>저장 데이터에 대한 행 수준 보안(Row Level Security) 적용 — 이용자는 본인의 데이터에만 접근 가능</li>
+  <li>관리자 권한(service_role) 분리 및 최소 권한 원칙 적용</li>
+  <li>인증 토큰(JWT) 기반 접근 통제</li>
+  <li>주요 변경 사항에 대한 감사 로그 기록</li>
+  <li>분석 데이터 PII 화이트리스트 강제 (위반 시 빌드 시점 차단)</li>
+</ul>
+
+<h2>10. 개인정보 보호책임자 및 문의처</h2>
+<ul>
+  <li>개인정보 보호책임자: Tokki Privacy Team</li>
+  <li>문의: Google Play에 표시된 Tokki 개발자 연락처</li>
+</ul>
+<p>또한 다음 기관에 권리 침해에 대한 상담 및 신고를 하실 수 있습니다.</p>
+<ul>
+  <li>개인정보분쟁조정위원회 (privacy.go.kr / 1833-6972)</li>
+  <li>개인정보침해신고센터 (privacy.kisa.or.kr / 118)</li>
+  <li>대검찰청 사이버수사과 (spo.go.kr / 1301)</li>
+  <li>경찰청 사이버수사국 (ecrm.cyber.go.kr / 182)</li>
+</ul>
+
+<h2>11. 정책의 변경</h2>
+<p>본 처리방침이 변경되는 경우, 변경 사항은 시행일 7일 전(이용자에게 불리한 변경의 경우 30일 전)에 앱 내 공지 또는 본 페이지를 통해 안내합니다.</p>
+
 </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tokki — プライバシーポリシー</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.8; color: #222; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+  h3 { font-size: 1.0rem; margin-top: 1.1rem; color: #444; }
+  table { border-collapse: collapse; margin: 0.6rem 0; width: 100%; font-size: 0.92rem; }
+  th, td { border: 1px solid #ddd; padding: 0.4rem 0.7rem; }
+  th { background: #fafafa; }
+  .meta { color: #666; font-size: 0.9rem; }
+  code { background: #f4f4f4; padding: 0 0.25rem; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Tokki — プライバシーポリシー</h1>
+<p class="meta">施行日: 2026年5月26日 · 最終更新日: 2026年6月13日</p>
+
+<p>Tokki(以下「本サービス」)は個人情報保護法等の関連法令を遵守し、利用者の個人情報を安全に保護するため本ポリシーを定めます。</p>
+
+<h2>1. 収集する個人情報</h2>
+<ul>
+  <li><strong>アカウント情報:</strong> Google OAuthから受領するメールアドレス、表示名、認証ID</li>
+  <li><strong>会話データ:</strong> 利用者が入力したチャットメッセージ、AI応答、ペルソナ記憶、セッションメタデータ</li>
+  <li><strong>任意の画像添付:</strong> チャットに写真を添付することを選んだ場合、その画像はAIが応答するために当該メッセージと一緒に送信されます。画像を選択しない限り写真ライブラリにはアクセスしません</li>
+  <li><strong>ギフト・デイリージョイ履歴:</strong> 送ったギフト、キャラクターから受け取る無料デイリージョイギフト、マイルストーン達成、親密度変動、シークレット解放履歴</li>
+  <li><strong>決済情報:</strong> サブスクリプション等級、有効期限、IAPレシートメタデータ(カード番号は受領しません)</li>
+  <li><strong>分析イベント:</strong> 匿名化された使用シグナル(アプリ起動、画面遷移、ギフト送信、無料デイリージョイ受け取り、決済完了、A/B曝露)。メッセージ本文・メール・IP・端末IDは含みません</li>
+  <li><strong>プッシュトークン:</strong> Expo / FCMトークン(通知許可時のみ)</li>
+  <li><strong>おおよその位置・現地の天気:</strong> コンパニオンが天気を自然に会話へ取り入れるためにのみ使用します。GPS座標はTokkiサーバーやTokki独自の分析には保存せず、現在の天気を照会するためにアプリからOpen-Meteoへ一時的に送信されます</li>
+  <li><strong>デバイス・利用情報:</strong> アプリバージョン、OS、エラーログ</li>
+</ul>
+
+<h2>2. 任意のリワード広告</h2>
+<p>無料ユーザーは、追加のチャット回数を得るために任意でリワード広告を視聴できます。この機能のためにGoogle Mobile Ads / AdMob SDKを使用します。Tokkiは個人データを販売せず、有料プランでは無料回数向けの広告フローを利用する必要はありません。広告リクエストでは、Googleが広告配信および測定に必要な広告関連識別子を処理する場合があり、必要に応じて同意設定とプラットフォーム設定が適用されます。</p>
+
+<h2>3. 分析データ — 厳格なホワイトリスト</h2>
+<p>匿名化された使用シグナルのみ収集します。以下はTokki独自の分析では<strong>絶対に収集しません</strong>:</p>
+<ul>
+  <li>チャットメッセージ本文</li>
+  <li>メール、生のニックネーム、IPアドレス</li>
+  <li>デバイス識別子、広告識別子</li>
+  <li>位置座標</li>
+  <li>クレジットカード番号、完全な取引ID、レシート本文</li>
+</ul>
+<p>ホワイトリスト対象イベントの例: <code>app_opened</code>, <code>paywall_viewed</code>, <code>purchase_completed</code>, <code>gift_sent</code>, <code>daily_joy_received</code>, <code>milestone_reached</code>, <code>mood_state_changed</code>, <code>experiment_exposed</code>。</p>
+
+<h2>4. 保存と安全性</h2>
+<p>データはSupabase(AWS東京リージョン経由ソウル)に保存されます。すべてTLS暗号化、行レベルセキュリティで本人のみアクセス可能です。</p>
+
+<h2>5. 第三者サービス</h2>
+<table>
+  <thead><tr><th>業者</th><th>用途</th></tr></thead>
+  <tbody>
+    <tr><td>Supabase, Inc.</td><td>データベース、認証</td></tr>
+    <tr><td>OpenAI, L.L.C.</td><td>チャットメッセージおよび任意の画像添付に対するAI応答生成(メッセージ単位)</td></tr>
+    <tr><td>Open-Meteo</td><td>任意の位置座標に基づく現在の天気照会</td></tr>
+    <tr><td>Google LLC</td><td>OAuth、Google Play課金、FCM、任意リワード広告用のGoogle Mobile Ads / AdMob</td></tr>
+    <tr><td>Apple Inc.</td><td>App Store課金(iOS)</td></tr>
+    <tr><td>Expo, Inc.</td><td>ランタイム、プッシュトークン</td></tr>
+  </tbody>
+</table>
+
+<h2>6. 保存期間</h2>
+<ul>
+  <li>アカウント・会話データ: 退会まで</li>
+  <li>決済履歴: 5年(消費者保護法対応)</li>
+  <li>分析イベント原本: 90日</li>
+  <li>プッシュトークン: 権限解除または退会で即削除</li>
+</ul>
+
+<h2>7. 利用者の権利</h2>
+<ul>
+  <li>アクセス、訂正、削除、ポータビリティ、同意撤回</li>
+  <li>設定 → アカウント → アカウント削除、または現在公開されているPlayサポートホストの <a href="delete-account.html">Web削除リクエストページ</a> から30日以内の削除をリクエストできます</li>
+</ul>
+
+<h2>8. 13歳未満</h2>
+<p>13歳未満の利用者からは情報を収集しません。確認次第アカウントを削除します。</p>
+
+<h2>9. 変更</h2>
+<p>重要な変更は施行7日前(不利益変更は30日前)にアプリ内で通知します。</p>
+
+<h2>10. お問い合わせ</h2>
+<p>お問い合わせ: Google Playに表示されているTokki開発者連絡先をご利用ください。</p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tokki — Política de Privacidad</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.75; color: #222; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+  h3 { font-size: 1.0rem; margin-top: 1.1rem; color: #444; }
+  table { border-collapse: collapse; margin: 0.6rem 0; width: 100%; font-size: 0.92rem; }
+  th, td { border: 1px solid #ddd; padding: 0.4rem 0.7rem; }
+  th { background: #fafafa; }
+  .meta { color: #666; font-size: 0.9rem; }
+  code { background: #f4f4f4; padding: 0 0.25rem; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Tokki — Política de Privacidad</h1>
+<p class="meta">Fecha efectiva: 26 de mayo de 2026 · Última actualización: 13 de junio de 2026</p>
+
+<p>Tokki ("nosotros", "el servicio") es una aplicación de chat con compañeros IA. Protegemos su privacidad y explicamos qué datos recopilamos, cómo los usamos y sus derechos.</p>
+
+<h2>1. Datos que recopilamos</h2>
+<ul>
+  <li><strong>Información de cuenta:</strong> correo electrónico y nombre de Google OAuth, ID de autenticación</li>
+  <li><strong>Mensajes de chat:</strong> conversaciones con personajes IA, memoria de personaje, metadatos de sesión</li>
+  <li><strong>Imágenes adjuntas opcionales:</strong> si eliges adjuntar una foto a un mensaje de chat, esa imagen se envía con el mensaje para que la IA pueda responder. No accedemos a tu biblioteca de fotos salvo que elijas una imagen</li>
+  <li><strong>Historial de regalos · Alegría diaria:</strong> regalos enviados, regalos gratuitos de Alegría diaria recibidos de personajes, hitos alcanzados, cambios de intimidad, secretos desbloqueados</li>
+  <li><strong>Datos de pago:</strong> nivel de suscripción, expiración, metadatos de recibo IAP (nunca recibimos número de tarjeta)</li>
+  <li><strong>Eventos de análisis:</strong> señales de uso anonimizadas — apertura de app, vistas de pantalla, regalos enviados, recepción gratuita de Alegría diaria, compras completadas, exposiciones A/B. Nunca incluye contenido de mensajes, correo, IP ni IDs de dispositivo</li>
+  <li><strong>Token de push:</strong> token de Expo / FCM (solo si concede permiso)</li>
+  <li><strong>Ubicación aproximada · clima local:</strong> se usa únicamente para que tu compañero pueda incorporar el clima de forma natural en la conversación. Las coordenadas GPS no se almacenan en servidores ni análisis propios de Tokki; la app las envía temporalmente a Open-Meteo para consultar el clima actual</li>
+  <li><strong>Información de dispositivo:</strong> versión de app, OS, registros de error</li>
+</ul>
+
+<h2>2. Anuncios recompensados opcionales</h2>
+<p>Los usuarios gratuitos pueden elegir ver anuncios recompensados para obtener turnos de chat adicionales. Para esta función, Tokki usa Google Mobile Ads / AdMob SDK. Tokki no vende datos personales, y los planes de pago pueden evitar este flujo de anuncios para turnos gratuitos. En las solicitudes de anuncios, Google puede procesar identificadores relacionados con publicidad para entrega y medición, sujeto a controles de consentimiento y ajustes de la plataforma cuando corresponda.</p>
+
+<h2>3. Datos de análisis — lista blanca estricta</h2>
+<p>Solo recopilamos señales anónimas. En los análisis propios de Tokki, <strong>nunca</strong> recopilamos:</p>
+<ul>
+  <li>Contenido de mensajes</li>
+  <li>Correo, apodo crudo, dirección IP</li>
+  <li>Identificador de dispositivo o publicidad</li>
+  <li>Coordenadas de ubicación</li>
+  <li>Número de tarjeta, ID completo de transacción, cuerpo de recibo</li>
+</ul>
+<p>Eventos permitidos de ejemplo: <code>app_opened</code>, <code>paywall_viewed</code>, <code>purchase_completed</code>, <code>gift_sent</code>, <code>daily_joy_received</code>, <code>milestone_reached</code>, <code>mood_state_changed</code>, <code>experiment_exposed</code>.</p>
+
+<h2>4. Almacenamiento y seguridad</h2>
+<p>Datos en Supabase (AWS Seúl). Encriptación TLS en tránsito. Row-Level Security garantiza acceso exclusivo del titular.</p>
+
+<h2>5. Servicios de terceros</h2>
+<table>
+  <thead><tr><th>Servicio</th><th>Propósito</th></tr></thead>
+  <tbody>
+    <tr><td>Supabase, Inc.</td><td>Base de datos, autenticación</td></tr>
+    <tr><td>OpenAI, L.L.C.</td><td>Generación de respuestas IA para mensajes de chat e imágenes adjuntas opcionales (por mensaje)</td></tr>
+    <tr><td>Open-Meteo</td><td>Consulta del clima actual desde coordenadas de ubicación opcionales</td></tr>
+    <tr><td>Google LLC</td><td>OAuth, Google Play, FCM, Google Mobile Ads / AdMob para anuncios recompensados opcionales</td></tr>
+    <tr><td>Apple Inc.</td><td>Facturación App Store (iOS)</td></tr>
+    <tr><td>Expo, Inc.</td><td>Runtime, tokens de push</td></tr>
+  </tbody>
+</table>
+
+<h2>6. Retención</h2>
+<ul>
+  <li>Cuenta y conversaciones: hasta eliminar cuenta</li>
+  <li>Registro de compras: 5 años</li>
+  <li>Eventos de análisis: 90 días</li>
+  <li>Token push: eliminado al revocar permiso o cuenta</li>
+</ul>
+
+<h2>7. Sus derechos</h2>
+<ul>
+  <li>Acceso, rectificación, supresión, portabilidad, retirada de consentimiento</li>
+  <li>Ajustes → Cuenta → Eliminar cuenta, o <a href="delete-account.html">la página web de solicitud de eliminación</a> en el host público actual de soporte Play, permite solicitar la eliminación en un plazo de 30 días</li>
+</ul>
+
+<h2>8. Menores de 13 años</h2>
+<p>No recopilamos datos de menores de 13. Las cuentas detectadas se eliminan inmediatamente.</p>
+
+<h2>9. Cambios</h2>
+<p>Notificaremos cambios importantes 7 días antes (30 días si son adversos).</p>
+
+<h2>10. Contacto</h2>
+<p>Contacto: usa el contacto de desarrollador de Tokki que aparece en Google Play.</p>
+
+</body>
+</html>

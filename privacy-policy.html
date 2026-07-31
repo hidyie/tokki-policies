@@ -3,73 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tokki - Privacy Policy</title>
+  <title>Tokki — Privacy Policy</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #09090b; color: #e4e4e7; line-height: 1.7; padding: 2rem; max-width: 800px; margin: 0 auto; }
     h1 { color: #fbbf24; margin-bottom: 0.5rem; font-size: 1.8rem; }
     h2 { color: #fbbf24; margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.3rem; }
+    h3 { color: #fde68a; margin-top: 1.2rem; margin-bottom: 0.4rem; font-size: 1.05rem; }
     p, li { margin-bottom: 0.8rem; font-size: 0.95rem; }
     ul { padding-left: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #3f3f46; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+    th { background: #18181b; }
     .date { color: #a1a1aa; font-size: 0.85rem; margin-bottom: 2rem; }
     a { color: #fbbf24; }
+    .note { background: #18181b; border-left: 3px solid #fbbf24; padding: 0.8rem 1rem; margin: 1rem 0; }
   </style>
 </head>
 <body>
-  <h1>Tokki - Privacy Policy</h1>
-  <p class="date">Effective Date: April 28, 2026</p>
+  <h1>Tokki — Privacy Policy</h1>
+  <p class="date">Effective: May 26, 2026 · Last updated: June 13, 2026</p>
 
   <h2>1. Introduction</h2>
-  <p>Tokki ("we", "our", "the app") is an AI companion chat application. We are committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights. Korean users are also covered by our Korean-language privacy policy (<a href="privacy-policy.ko.html">privacy-policy.ko.html</a>); in case of conflict, the Korean version prevails for Korean users.</p>
+  <p>Tokki ("we", "our", "the app") is an AI companion chat application. We protect your privacy and explain what data we collect, how we use it, and your rights.</p>
 
   <h2>2. Data We Collect</h2>
   <ul>
-    <li><strong>Account Information:</strong> When you sign in with Google, we receive your email address and display name from Google OAuth. We do not access your Google password.</li>
-    <li><strong>Chat Messages:</strong> Your conversations with AI characters are stored on our servers to provide continuity between sessions. All chat data is private and only accessible by you.</li>
-    <li><strong>Device Information:</strong> We collect basic device identifiers for push notification delivery and crash analytics.</li>
-    <li><strong>Purchase Data:</strong> If you subscribe, transaction records are processed through Google Play and stored to manage your subscription status.</li>
+    <li><strong>Account Information:</strong> Email address and display name from Google OAuth. Your Google password is never shared with us.</li>
+    <li><strong>Chat Messages:</strong> Your conversations with AI characters are stored on our servers for continuity between sessions. All chat data is private and only accessible by you.</li>
+    <li><strong>Optional Image Attachments:</strong> If you choose to attach a photo to a chat message, the selected image is sent with that message so the AI can respond to it. We do not access your photo library unless you choose an image.</li>
+    <li><strong>Persona Memory:</strong> Facts and emotional cues the AI remembers about you to personalize replies. You can reset memory at any time via Settings → Memory → Reset.</li>
+    <li><strong>Gift & Daily Joy History:</strong> Records of gifts you sent, free Daily Joy gifts received from characters, milestone unlocks, intimacy progress, and the secret memories you have unlocked.</li>
+    <li><strong>Purchase Data:</strong> Subscription tier, expiry, in-app purchase receipt metadata. Payment card numbers are never received by us — Apple/Google handle billing.</li>
+    <li><strong>Analytics Events:</strong> Aggregated, anonymized usage signals — app opens, screen views, gift sent counts, free Daily Joy claims, purchase completions, A/B test exposures. We never log chat content, email, IP, or device identifiers in analytics. See §5 for the full whitelist.</li>
+    <li><strong>Push Token:</strong> Expo / FCM token, only if you grant notification permission.</li>
+    <li><strong>Approximate Location & Local Weather:</strong> used only so your companion can naturally weave the weather into conversation. GPS coordinates are not stored on Tokki servers or in Tokki analytics; they are sent transiently from the app to Open-Meteo to look up the current weather.</li>
+    <li><strong>Device & Crash Info:</strong> App version, OS version, error logs — used for stability.</li>
   </ul>
 
   <h2>3. How We Use Your Data</h2>
   <ul>
-    <li>To provide and improve the AI chat experience</li>
-    <li>To remember conversation context across sessions</li>
-    <li>To manage your subscription and account</li>
-    <li>To send push notifications (only if you opt in)</li>
+    <li>Provide and improve the AI chat experience</li>
+    <li>Remember conversation context, persona facts, and unlocked secrets across sessions</li>
+    <li>Provide free Daily Joy companion gifts and relationship milestones</li>
+    <li>Manage your subscription, credit balances, and milestones</li>
+    <li>Send push notifications (only if you opt in)</li>
+    <li>Detect abuse, prevent fraud, and respond to outages</li>
+    <li>Run anonymous A/B experiments to improve pricing, copy, and game balance</li>
   </ul>
 
-  <h2>4. Data Storage and Security</h2>
-  <p>Your data is stored on Supabase servers (AWS ap-northeast-2, Seoul). All data is encrypted in transit (TLS) and at rest. Row-Level Security ensures that only you can access your own data. No other user can see your messages or profile.</p>
+  <h2>4. Optional Rewarded Ads</h2>
+  <p>Free users may choose to watch rewarded ads for extra chat turns. Tokki uses Google Mobile Ads / AdMob only for this optional reward flow. We do not sell personal data, and paid tiers can avoid the free-turn ad flow. Ad requests may involve Google processing ad-related identifiers for delivery and measurement, subject to consent controls and platform settings where required.</p>
 
-  <h2>5. Third-Party Services</h2>
+  <h2>5. Analytics Data — Strict Whitelist</h2>
+  <p>We collect anonymous usage signals to improve the product. Every property is on a strict whitelist; the following data is <strong>never</strong> collected in Tokki's own analytics:</p>
   <ul>
-    <li><strong>Supabase:</strong> Authentication and database (<a href="https://supabase.com/privacy">supabase.com/privacy</a>)</li>
-    <li><strong>OpenAI:</strong> AI response generation (<a href="https://openai.com/policies/privacy-policy">openai.com/privacy</a>)</li>
-    <li><strong>Google:</strong> OAuth authentication and Play Store billing</li>
-    <li><strong>Expo:</strong> App runtime and push notification token issuance</li>
+    <li>Chat message content (raw text)</li>
+    <li>Email, raw nickname, IP address</li>
+    <li>Device identifier, advertising identifier</li>
+    <li>Geolocation coordinates</li>
+    <li>Payment card number, full transaction ID, receipt body</li>
   </ul>
+  <p>Whitelisted events include: <code>app_opened</code>, <code>paywall_viewed</code>, <code>purchase_completed</code>, <code>gift_sent</code>, <code>daily_joy_received</code>, <code>milestone_reached</code>, <code>mood_state_changed</code>, <code>experiment_exposed</code>. Each event includes only the specific properties listed in our analytics SDK source code.</p>
 
-  <h2>6. Data Retention</h2>
-  <p>Your data is retained as long as your account is active. You can delete your account and all associated data at any time by contacting us. Upon account deletion, all chat history, profile data, and stored memories are permanently removed within 30 days. Purchase records are retained for 5 years to comply with applicable Korean consumer protection laws.</p>
+  <h2>6. Data Storage and Security</h2>
+  <p>Your data is stored on Supabase (PostgreSQL, region: AWS ap-northeast-2 Seoul). All transit is TLS-encrypted. Storage is encrypted at rest. Row-Level Security ensures only you can read or modify your own data. No other user — and no Tokki staff acting in a normal role — can read your chats.</p>
 
-  <h2>7. Children's Privacy</h2>
-  <p>Tokki is not intended for children under 13 (or under 14 for Korean users, per Korean law). We do not knowingly collect data from children under these ages. If you believe a child has provided us with personal data, please contact us.</p>
+  <h2>7. Third-Party Services</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Purpose</th><th>Region</th></tr></thead>
+    <tbody>
+      <tr><td>Supabase, Inc.</td><td>Database, Auth, Edge Functions</td><td>USA / Seoul</td></tr>
+      <tr><td>OpenAI, L.L.C.</td><td>AI response generation for chat messages and optional image attachments (per-message)</td><td>USA</td></tr>
+      <tr><td>Open-Meteo</td><td>Current weather lookup from optional location coordinates</td><td>EU / global</td></tr>
+      <tr><td>Google LLC</td><td>OAuth, Play Store billing, FCM push, Google Mobile Ads / AdMob for optional rewarded ads</td><td>USA</td></tr>
+      <tr><td>Apple Inc.</td><td>App Store billing (iOS release)</td><td>USA</td></tr>
+      <tr><td>Expo, Inc.</td><td>App runtime, push token issuance</td><td>USA</td></tr>
+    </tbody>
+  </table>
 
-  <h2>8. Your Rights</h2>
+  <h2>8. Data Retention</h2>
   <ul>
-    <li><strong>Access:</strong> You can request a copy of your data</li>
-    <li><strong>Deletion:</strong> You can request deletion of all your data</li>
-    <li><strong>Portability:</strong> You can request your data in a portable format</li>
-    <li><strong>Correction:</strong> You can request correction of inaccurate data</li>
+    <li><strong>Account & chat data:</strong> kept until you delete your account.</li>
+    <li><strong>Purchase log:</strong> kept 5 years to comply with consumer-protection laws.</li>
+    <li><strong>Analytics events:</strong> raw rows cleared after 90 days; aggregates retained for product analytics.</li>
+    <li><strong>Push token:</strong> deleted immediately when you revoke notification permission or delete the account.</li>
   </ul>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this policy from time to time. We will notify you of significant changes through the app or via email.</p>
+  <h2>9. Your Rights</h2>
+  <ul>
+    <li><strong>Access:</strong> request a copy of your data via Settings or email.</li>
+    <li><strong>Deletion:</strong> Settings → Account → Delete Account removes your Tokki account data within 30 days. If you cannot access the app, visit <a href="delete-account.html">delete-account.html</a> on Tokki's current public Play support host to request deletion.</li>
+    <li><strong>Portability:</strong> request your data in JSON.</li>
+    <li><strong>Correction:</strong> request correction of inaccurate data.</li>
+    <li><strong>Withdrawal of consent:</strong> revoke push permission or delete the account at any time.</li>
+  </ul>
 
-  <h2>10. Contact Us</h2>
-  <p>For privacy-related questions or data requests:<br>
-  Privacy Officer: Song Jaeseong<br>
-  Email: <a href="mailto:privacy@bitterpill.chat">privacy@bitterpill.chat</a><br>
-  Website: <a href="https://www.bitterpill.chat">www.bitterpill.chat</a></p>
+  <h2>10. Children</h2>
+  <p>Tokki is not directed to children under 13 (US) or 14 (Korea). We do not knowingly collect data from such users. If a parent or guardian learns that a child has created an account, please contact us — we will delete the account and all associated data.</p>
+
+  <h2>11. Changes</h2>
+  <p>We will notify you of material changes through in-app announcement at least 7 days before they take effect (30 days for changes adverse to users).</p>
+
+  <h2>12. Contact</h2>
+  <p>Privacy contact: use the Google Play developer contact listed for Tokki.</p>
 </body>
 </html>

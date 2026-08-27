@@ -1,2 +1,2 @@
 # tokki-policies
-Public privacy policy and terms for Tokki - AI Companion app
+Public privacy policy and terms for LERUNI - AI Companion app
